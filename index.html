@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pune Main Bajar — Live Matka Results, Charts, Jodi Chart, Panel Chart, Fast Result." />
+  <meta name="keywords" content="Pune Main Bajar, Matka Results, Charts, Panel, Jodi" />
+  <title>Pune Main Bajar — Live Results &amp; Charts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ---------- Base — close to screenshots, minor tuning ---------- */
+    :root {
+      --page-gray: #c8dce8;
+      --page-dark: #2c3850;
+      --page-warm-cream: #fdf5e6;
+      --page-cream-plain: #f7f7f0;
+      --paper: #ffffff;
+      --accent-red: #c62828;
+      --accent-red-deep: #8b1f1f;
+      --banner-yellow: #f5e100;
+      --row-yellow: #fff59d;
+      --row-beige: #faf6e8;
+      --btn-blue: #1e5795;
+      --link-navy: #0d1f6e;
+      --green-strip: #1b7a3f;
+      --green-strip-border: #0f4d29;
+      --table-yellow: #ffeb3b;
+      --text-hi: #1a1a1a;
+      --border-soft: rgba(26,26,26,0.12);
+      --radius-lg: 10px;
+      --radius-xl: 16px;
+      --radius-bar: 24px;
+      --fonts: "Roboto Condensed", "Segoe UI", Tahoma, Geneva, Arial, sans-serif;
+      --maxw: min(980px, 100% - 16px);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--fonts);
+      color: var(--text-hi);
+      line-height: 1.42;
+      background: var(--page-gray);
+    }
+
+    /* ---------- Head / Navigation ---------- */
+    .top-banner-nav {
+      background: linear-gradient(#f3dd3a, var(--banner-yellow));
+      padding: 8px 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: clamp(13px, 2.9vw, 16px);
+      letter-spacing: 0.06em;
+      border-bottom: 2px solid #c9ae00;
+      color: #111;
+    }
+    header.main-title-box {
+      max-width: var(--maxw);
+      margin: 14px auto 0;
+      background: var(--paper);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 18px 12px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    header.main-title-box h1 {
+      margin: 0;
+      font-size: clamp(22px, 5vw, 32px);
+      font-weight: 700;
+      color: #081a61;
+      text-transform: none;
+      letter-spacing: 0.01em;
+    }
+    /* Welcome strip */
+    .welcome-strip {
+      max-width: var(--maxw);
+      margin: 10px auto 0;
+      background: var(--paper);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+    }
+    .welcome-strip span:first-child {
+      flex: 1 1 160px;
+    }
+    .welcome-strip span:last-child {
+      flex: 2 1 240px;
+      text-align: right;
+    }
+
+    nav.site-nav {
+      max-width: var(--maxw);
+      margin: 10px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      padding: 4px;
+    }
+    nav.site-nav a {
+      flex: 1 1 auto;
+      max-width: 140px;
+      text-align: center;
+      padding: 8px 10px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 8px;
+      background: var(--green-strip);
+      color: #fff;
+      border: 1px solid var(--green-strip-border);
+    }
+    nav.site-nav a:hover { filter: brightness(1.06); color: #fff; }
+
+    .stack-wrap { padding-bottom: 22px; }
+
+    /* ---------- Generic white boxed sections (home) ---------- */
+    .section-box {
+      max-width: var(--maxw);
+      margin: 12px auto 0;
+      background: var(--paper);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+    .section-box h2 { margin: 0 0 10px; font-size: clamp(17px, 4vw, 21px); }
+    .seo-text {
+      margin: 0 auto;
+      max-width: 52em;
+      font-size: 12px;
+      color: #454545;
+      line-height: 1.55;
+    }
+
+    /* Red pill bar inside boxes */
+    .red-bar-rounded {
+      background: linear-gradient(#d32f2f, var(--accent-red));
+      border-radius: var(--radius-bar);
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 0.06em;
+      padding: 8px;
+      margin: -4px 0 0;
+      font-size: 14px;
+    }
+    .cream-panel {
+      background: linear-gradient(#fffefd, var(--page-warm-cream));
+      border-radius: var(--radius-lg);
+      padding: 14px 12px;
+      margin-top: 8px;
+    }
+    .lucky-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: start;
+      text-align: center;
+      font-weight: 700;
+    }
+    @media (max-width: 560px) {
+      .lucky-grid { grid-template-columns: 1fr; }
+    }
+    .lucky-grid .muted { font-size: 13px; color: #333; margin-bottom: 8px; }
+    .digits-lg { font-size: 22px; letter-spacing: 0.06em; }
+    .lucky-grid .reds { margin: 10px 0 0; color: var(--accent-red); font-weight: 700; }
+
+    .download-btn-row { margin-top: 16px; }
+    button.download-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 24px;
+      border-radius: 10px;
+      border: 2px solid rgba(255,255,255,0.95);
+      background: linear-gradient(#3676c9, var(--btn-blue));
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 2px 8px rgba(0,44,118,0.35);
+    }
+    button.download-big .ico {
+      display: inline-grid; place-items: center;
+      width: 32px; height: 28px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    /* ---------- Live teaser + notice ---------- */
+    .blink-text {
+      animation: mpb-blink 1.2s step-end infinite;
+      font-weight: 700;
+    }
+    @keyframes mpb-blink { 50% { opacity: 0.45; } }
+
+    /* ---------- Dark band: ticker + results board ---------- */
+    .dark-stage {
+      background: var(--page-dark);
+      padding: 16px 0 22px;
+      margin-top: 18px;
+    }
+    .ticker-strip {
+      max-width: var(--maxw);
+      margin: 0 auto 12px;
+      background: linear-gradient(var(--accent-red-deep), #b71c1c);
+      border-radius: 8px;
+      color: #fff;
+      padding: 8px 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: clamp(11px, 2.9vw, 14px);
+      letter-spacing: 0.04em;
+      border: 1px solid #6b0000;
+    }
+    .board-shell {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      border: 2px solid rgba(148,177,227,0.65);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: #e8eef7;
+      box-shadow: 0 4px 22px rgba(0,0,0,0.35);
+    }
+    .market-row {
+      display: grid;
+      grid-template-columns: 68px minmax(0,1fr) 68px;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-bottom: 1px solid #9a7a3a;
+      text-align: center;
+    }
+    .market-row:nth-child(odd) { background: var(--row-yellow); }
+    .market-row:nth-child(even) { background: var(--row-beige); }
+    .market-row.is-live .result-line { animation: mpb-blink 1s step-end infinite; }
+
+    @media (max-width: 520px) {
+      .market-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .mini-btn { margin: 0 auto; }
+    }
+
+    .mini-btn {
+      display: inline-block;
+      background: var(--btn-blue);
+      color: #fff !important;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      border: 1px solid rgba(0,28,73,0.45);
+      box-shadow: inset 0 1px rgba(255,255,255,0.35);
+      white-space: nowrap;
+    }
+    .mini-btn:hover { filter: brightness(1.06); color: #fff !important; }
+    .market-name-row {
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-size: 14px;
+    }
+    .result-line {
+      font-weight: 700;
+      font-size: clamp(15px, 4vw, 19px);
+      margin: 3px 0;
+    }
+    .time-line { font-weight: 700; font-size: 12px; }
+
+    /* ---------- Charts area (screenshot 3) ---------- */
+    .charts-stage {
+      background: var(--page-dark);
+      padding: 22px 0 28px;
+    }
+    .charts-inner-wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+    }
+    .market-wide-bar {
+      background: linear-gradient(#f5e55a, var(--banner-yellow));
+      color: #111;
+      font-weight: 800;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      border: 1px solid #c9b000;
+      letter-spacing: 0.08em;
+    }
+    .chart-card {
+      background: var(--page-warm-cream);
+      border: 2px solid #4a6fa5;
+      border-radius: 22px;
+      padding: 10px 10px 4px;
+      margin-bottom: 18px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    }
+    .chart-card .red-bar-rounded { margin: 2px 6px 10px; }
+    .chart-list { list-style: none; margin: 0; padding: 0; }
+    .chart-list li {
+      border-bottom: 1px solid #a67c52;
+      padding: 10px 6px;
+      text-align: center;
+    }
+    .chart-list li:last-child { border-bottom: none; }
+    .chart-list a {
+      color: var(--link-navy);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    .chart-list a:hover { text-decoration: underline; }
+
+    /* ---------- Date + grid cards (screenshot 4) ---------- */
+    .beige-stage {
+      background: var(--page-cream-plain);
+      padding: 18px 0 24px;
+    }
+    .date-banner {
+      max-width: var(--maxw);
+      margin: 0 auto 14px;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      font-weight: 700;
+      background: #fff;
+      font-size: 14px;
+    }
+    .two-col-grid {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 720px) { .two-col-grid { grid-template-columns: 1fr; } }
+
+    .small-card {
+      border: 1px solid #333;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .small-card .head {
+      background: var(--green-strip);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 6px;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    .small-card .body {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 6px;
+      text-align: center;
+      line-height: 1.55;
+    }
+
+    /* ---------- Night rows + support + weekly (screenshot 5) ---------- */
+    .cream-stage {
+      background: var(--page-warm-cream);
+      padding: 16px 0 24px;
+    }
+    .panel-panel {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      border: 1px solid #b7a78a;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fffaf0;
+    }
+    .support-red {
+      background: var(--accent-red);
+      color: #fff;
+      text-align: center;
+      padding: 10px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      border-top: 1px solid #7a1a1a;
+    }
+    .weekly-green {
+      margin: 16px auto 8px;
+      max-width: var(--maxw);
+      background: var(--green-strip);
+      border: 2px solid var(--green-strip-border);
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 700;
+      font-size: clamp(10px, 2.3vw, 12px);
+      text-align: center;
+      padding: 12px 14px;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+    }
+    .patti-block {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.75;
+      padding: 8px 6px 16px;
+    }
+
+    /* ---------- Big day tables (screenshot 6) ---------- */
+    .tables-dark {
+      background: #1c1c1c;
+      padding: 16px 0 30px;
+    }
+    .table-wrap {
+      max-width: var(--maxw);
+      margin: 0 auto 16px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #5c4033;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #fff;
+    }
+    .scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    table.data-table th {
+      background: var(--table-yellow);
+      padding: 8px 4px;
+      border: 1px solid #333;
+      text-align: center;
+      font-size: 14px;
+    }
+    table.data-table td {
+      border: 1px solid #333;
+      text-align: center;
+      vertical-align: middle;
+      padding: 6px 4px;
+    }
+    table.data-table .day { background: #f3f3f3; width: 44px; }
+    table.data-table .big { font-size: 18px; }
+    .stack-n { display: flex; flex-direction: column; align-items: center; line-height: 1.2; font-size: 11px; }
+
+    /* ---------- Footer ---------- */
+    footer.site-foot {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 16px 10px 22px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    footer.site-foot strong { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- Nav / brand bar -->
+  <div class="top-banner-nav" id="home">PUNE MAIN BAJAR</div>
+
+  <header class="main-title-box">
+    <h1>Pune Main Bajar</h1>
+  </header>
+
+  <div class="welcome-strip">
+    <span>Pune Main Bajar</span>
+    <span>!! Welcome to Pune Main Bajar international !! Satta Matka Fast Result</span>
+  </div>
+
+  <nav class="site-nav" aria-label="Main">
+    <a href="#home">Home</a>
+    <a href="#charts">Charts</a>
+    <a href="#results">Results</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="stack-wrap">
+
+    <!-- Intro / SEO -->
+    <section class="section-box">
+      <h2>Satta Matka Pune Main Bajar Kalyan Matka Result</h2>
+      <p class="seo-text">
+        Pune Main Bajar is your trusted source for fast Satta Matka results, Kalyan Matka, Milan Day &amp; Night,
+        Time Bazar, Main Bazar, and popular morning–night markets. View live-style boards, jodi chart, panel chart,
+        weekly patti &amp; penal chart — all on one page. This is a static demo with sample numbers only.
+      </p>
+    </section>
+
+    <!-- Today lucky number -->
+    <section class="section-box">
+      <div class="red-bar-rounded">TODAY LUCKY NUMBER</div>
+      <div class="cream-panel">
+        <div class="lucky-grid">
+          <div>
+            <div class="muted">GOLDEN Ank</div>
+            <div class="digits-lg">7-4-3-9</div>
+          </div>
+          <div>
+            <div class="muted">Final Ank</div>
+            <div class="reds">PMB MORNING-6</div>
+            <div class="reds">PMB DAY-5</div>
+          </div>
+        </div>
+        <div class="download-btn-row">
+          <button type="button" class="download-big" aria-label="Download">
+            <span class="ico">↓</span> Download Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live result strip -->
+    <section class="section-box">
+      <div class="red-bar-rounded">★ LIVE RESULT ★</div>
+      <div class="cream-panel">
+        <p class="blink-text" style="margin:0;font-size:15px;">Sabse Tezz Live Result Yahi Milega</p>
+      </div>
+    </section>
+
+    <!-- Notice -->
+    <section class="section-box" id="contact">
+      <div class="red-bar-rounded">★ NOTICE ★</div>
+      <div class="cream-panel">
+        <p style="margin:0;font-weight:700;font-size:14px;">
+          अपना बाजार Pune Main Bajar वेबसाइट में डलवाने के लिए आज ही हमें ईमेल करें
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Dark results board -->
+  <section class="dark-stage" id="results">
+    <div class="ticker-strip">⭐ WORLD ME SABSE FAST SATTA MATKA RESULT ⭐</div>
+    <div class="board-shell">
+      <div class="market-row is-live">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">PMB MORNING</div>
+          <div class="result-line">480-29-289</div>
+          <div class="time-line">11:10 AM &nbsp; 12:10 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">PMB DAY</div>
+          <div class="result-line">228-29-126</div>
+          <div class="time-line">1:10 PM &nbsp; 2:30 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">SHRIDEVI</div>
+          <div class="result-line">130-49-234</div>
+          <div class="time-line">11:35 AM &nbsp; 12:35 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">PMB NIGHT</div>
+          <div class="result-line">379-97-250</div>
+          <div class="time-line">7:45 PM &nbsp; 8:45 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">MILAN DAY</div>
+          <div class="result-line">112-41-236</div>
+          <div class="time-line">3:00 PM &nbsp; 5:00 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">TIME BAZZAR</div>
+          <div class="result-line">257-43-580</div>
+          <div class="time-line">1:00 PM &nbsp; 2:00 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">KALYAN</div>
+          <div class="result-line">180-97-250</div>
+          <div class="time-line">4:35 PM &nbsp; 6:35 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">SHRIDEVI NIGHT</div>
+          <div class="result-line">177-51-579</div>
+          <div class="time-line">7:15 PM &nbsp; 8:15 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">MILAN NIGHT</div>
+          <div class="result-line">266-48-129</div>
+          <div class="time-line">9:00 PM &nbsp; 11:00 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">KALYAN NIGHT</div>
+          <div class="result-line">335-12-660</div>
+          <div class="time-line">9:30 PM &nbsp; 11:45 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">MAIN BAZAAR</div>
+          <div class="result-line">901-10-235</div>
+          <div class="time-line">9:40 PM &nbsp; 12:10 AM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chart link cards -->
+  <section class="charts-stage" id="charts">
+    <div class="charts-inner-wrap">
+      <div class="market-wide-bar">PUNE MAIN BAJAR</div>
+
+      <div class="chart-card">
+        <div class="red-bar-rounded">SATTA MATKA JODI CHART</div>
+        <ul class="chart-list">
+          <li><a href="#charts">PMB MORNING</a></li>
+          <li><a href="#charts">PMB DAY</a></li>
+          <li><a href="#charts">SHRIDEVI</a></li>
+          <li><a href="#charts">PMB NIGHT</a></li>
+          <li><a href="#charts">MILAN DAY</a></li>
+          <li><a href="#charts">TIME BAZZAR</a></li>
+          <li><a href="#charts">KALYAN</a></li>
+          <li><a href="#charts">SHRIDEVI NIGHT</a></li>
+          <li><a href="#charts">MILAN NIGHT</a></li>
+          <li><a href="#charts">KALYAN NIGHT</a></li>
+          <li><a href="#charts">MAIN BAZAAR</a></li>
+        </ul>
+      </div>
+
+      <div class="chart-card">
+        <div class="red-bar-rounded">MATKA PANEL CHART</div>
+        <ul class="chart-list">
+          <li><a href="#charts">PMB MORNING</a></li>
+          <li><a href="#charts">PMB DAY</a></li>
+          <li><a href="#charts">SHRIDEVI</a></li>
+          <li><a href="#charts">PMB NIGHT</a></li>
+          <li><a href="#charts">MILAN DAY</a></li>
+          <li><a href="#charts">TIME BAZZAR</a></li>
+          <li><a href="#charts">KALYAN</a></li>
+          <li><a href="#charts">SHRIDEVI NIGHT</a></li>
+          <li><a href="#charts">MILAN NIGHT</a></li>
+          <li><a href="#charts">KALYAN NIGHT</a></li>
+          <li><a href="#charts">MAIN BAZAAR</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Date + small result grid -->
+  <section class="beige-stage">
+    <div class="date-banner">
+      DATE: ⭐ 02-05-2026 ⭐<br />
+      FREE GUESSING DAILY — OPEN TO CLOSE FIX ANK
+    </div>
+    <div class="two-col-grid" style="margin-bottom:12px;">
+      <div class="small-card">
+        <div class="head">↻ PMB MORNING</div>
+        <div class="body">2-7-9<br />129-278-369<br />21-28-74-79-93-98</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ PMB DAY</div>
+        <div class="body">2-2-8<br />234-118-567<br />15-18-27-35-48-59</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ SHRIDEVI</div>
+        <div class="body">1-3-0<br />130-490-234<br />12-19-30-43-59-68</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ PMB NIGHT</div>
+        <div class="body">3-7-9<br />379-097-250<br />33-37-90-95-50-55</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ MILAN DAY</div>
+        <div class="body">1-1-2<br />112-412-236<br />11-12-24-26-36-63</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ TIME BAZZAR</div>
+        <div class="body">2-5-7<br />257-435-802<br />25-27-35-38-02-20</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ KALYAN</div>
+        <div class="body">1-8-0<br />180-972-500<br />18-10-27-70-50-05</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ SHRIDEVI NIGHT</div>
+        <div class="body">1-7-7<br />177-519-579<br />17-71-95-59-79-97</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ MILAN NIGHT</div>
+        <div class="body">2-6-6<br />266-481-129<br />26-24-81-18-29-92</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ KALYAN NIGHT</div>
+        <div class="body">3-3-5<br />335-126-660<br />33-35-12-21-60-06</div>
+      </div>
+      <div class="small-card">
+        <div class="head">↻ MAIN BAZAAR</div>
+        <div class="body">9-0-1<br />901-102-235<br />90-09-12-21-35-53</div>
+      </div>
+    </div>
+
+    <div class="scroll-x" style="max-width:var(--maxw);margin:0 auto;">
+      <table class="data-table" style="min-width:640px;">
+        <thead>
+          <tr><th colspan="9">PMB MORNING</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="day">सोम</td>
+            <td class="big">0</td>
+            <td><span class="stack-n"><span>127</span><span>05</span></span></td>
+            <td class="big">5</td>
+            <td><span class="stack-n"><span>339</span><span>50</span></span></td>
+            <td class="big">8</td>
+            <td><span class="stack-n"><span>189</span><span>89</span></span></td>
+            <td class="big">9</td>
+            <td><span class="stack-n"><span>568</span><span>98</span></span></td>
+          </tr>
+          <tr>
+            <td class="day">मंगल</td>
+            <td class="big">3</td>
+            <td><span class="stack-n"><span>412</span><span>71</span></span></td>
+            <td class="big">7</td>
+            <td><span class="stack-n"><span>856</span><span>93</span></span></td>
+            <td class="big">1</td>
+            <td><span class="stack-n"><span>290</span><span>82</span></span></td>
+            <td class="big">4</td>
+            <td><span class="stack-n"><span>445</span><span>61</span></span></td>
+          </tr>
+          <tr>
+            <td class="day">बुध</td>
+            <td class="big">6</td>
+            <td><span class="stack-n"><span>778</span><span>15</span></span></td>
+            <td class="big">2</td>
+            <td><span class="stack-n"><span>034</span><span>63</span></span></td>
+            <td class="big">8</td>
+            <td><span class="stack-n"><span>667</span><span>71</span></span></td>
+            <td class="big">0</td>
+            <td><span class="stack-n"><span>990</span><span>94</span></span></td>
+          </tr>
+          <tr>
+            <td class="day">गुरु</td>
+            <td class="big">9</td>
+            <td><span class="stack-n"><span>521</span><span>82</span></span></td>
+            <td class="big">4</td>
+            <td><span class="stack-n"><span>183</span><span>71</span></span></td>
+            <td class="big">5</td>
+            <td><span class="stack-n"><span>756</span><span>93</span></span></td>
+            <td class="big">3</td>
+            <td><span class="stack-n"><span>612</span><span>64</span></span></td>
+          </tr>
+          <tr>
+            <td class="day">शुक्र</td>
+            <td class="big">2</td>
+            <td><span class="stack-n"><span>945</span><span>93</span></span></td>
+            <td class="big">6</td>
+            <td><span class="stack-n"><span>378</span><span>71</span></span></td>
+            <td class="big">1</td>
+            <td><span class="stack-n"><span>801</span><span>55</span></span></td>
+            <td class="big">7</td>
+            <td><span class="stack-n"><span>223</span><span>93</span></span></td>
+          </tr>
+          <tr>
+            <td class="day">शनि</td>
+            <td class="big">8</td>
+            <td><span class="stack-n"><span>667</span><span>93</span></span></td>
+            <td class="big">0</td>
+            <td><span class="stack-n"><span>112</span><span>61</span></span></td>
+            <td class="big">4</td>
+            <td><span class="stack-n"><span>489</span><span>72</span></span></td>
+            <td class="big">5</td>
+            <td><span class="stack-n"><span>334</span><span>93</span></span></td>
+          </tr>
+          <tr>
+            <td class="day">रवि</td>
+            <td class="big">7</td>
+            <td><span class="stack-n"><span>056</span><span>93</span></span></td>
+            <td class="big">3</td>
+            <td><span class="stack-n"><span>901</span><span>93</span></span></td>
+            <td class="big">9</td>
+            <td><span class="stack-n"><span>245</span><span>93</span></span></td>
+            <td class="big">1</td>
+            <td><span class="stack-n"><span>678</span><span>93</span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Night-style panel + support + weekly -->
+  <section class="cream-stage">
+    <div class="panel-panel">
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">SHRIDEVI NIGHT</div>
+          <div class="result-line">177-51-579</div>
+          <div class="time-line">7:15 PM &nbsp; 8:15 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">MILAN NIGHT</div>
+          <div class="result-line">266-48-129</div>
+          <div class="time-line">9:00 PM &nbsp; 11:00 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">KALYAN NIGHT</div>
+          <div class="result-line">335-12-660</div>
+          <div class="time-line">9:30 PM &nbsp; 11:45 PM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="market-row">
+        <a class="mini-btn" href="#charts">JODI</a>
+        <div>
+          <div class="market-name-row">MAIN BAZAAR</div>
+          <div class="result-line">901-10-235</div>
+          <div class="time-line">9:40 PM &nbsp; 12:10 AM</div>
+        </div>
+        <a class="mini-btn" href="#charts">PANEL</a>
+      </div>
+      <div class="support-red">
+        Email for any inquiries Or Support: <a href="mailto:support@punemainbajar.example" style="color:#fff;">support@punemainbajar.example</a>
+      </div>
+    </div>
+
+    <div class="weekly-green">
+      PUNE MAIN BAJAR NET WEEKLY PATTI OR PENAL CHART FROM 27-04-2026 TO 03-05-2026 FOR
+      KALYAN, KALYAN NIGHT, MAIN BAZAAR, MILAN DAY, MILAN NIGHT, PMB DAY, PMB MORNING, PMB NIGHT,
+      SHRIDEVI, SHRIDEVI NIGHT, TIME BAZZAR
+    </div>
+    <div class="patti-block">
+      1=&gt;290-669-678-489<br />
+      2=&gt;129-570-679-660<br />
+      3=&gt;139-580-689-120<br />
+      4=&gt;248-670-679-330<br />
+      5=&gt;450-780-880-339<br />
+      6=&gt;123-456-789-240<br />
+      7=&gt;278-389-470-156<br />
+      8=&gt;189-279-468-800<br />
+      9=&gt;568-379-127-449<br />
+      0=&gt;570-127-380-668
+    </div>
+  </section>
+
+  <!-- Full day-wise tables (stacked markets) -->
+  <section class="tables-dark" id="day-tables">
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">PMB MORNING</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">0</td><td><span class="stack-n"><span>127</span><span>05</span></span></td><td class="big">5</td><td><span class="stack-n"><span>339</span><span>18</span></span></td><td class="big">8</td><td><span class="stack-n"><span>189</span><span>27</span></span></td><td class="big">9</td><td><span class="stack-n"><span>588</span><span>36</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">1</td><td><span class="stack-n"><span>290</span><span>14</span></span></td><td class="big">4</td><td><span class="stack-n"><span>455</span><span>22</span></span></td><td class="big">7</td><td><span class="stack-n"><span>678</span><span>31</span></span></td><td class="big">2</td><td><span class="stack-n"><span>234</span><span>49</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">3</td><td><span class="stack-n"><span>112</span><span>07</span></span></td><td class="big">6</td><td><span class="stack-n"><span>789</span><span>55</span></span></td><td class="big">0</td><td><span class="stack-n"><span>460</span><span>63</span></span></td><td class="big">8</td><td><span class="stack-n"><span>901</span><span>72</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">5</td><td><span class="stack-n"><span>345</span><span>19</span></span></td><td class="big">2</td><td><span class="stack-n"><span>567</span><span>28</span></span></td><td class="big">9</td><td><span class="stack-n"><span>890</span><span>37</span></span></td><td class="big">1</td><td><span class="stack-n"><span>123</span><span>46</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">4</td><td><span class="stack-n"><span>478</span><span>11</span></span></td><td class="big">8</td><td><span class="stack-n"><span>256</span><span>33</span></span></td><td class="big">3</td><td><span class="stack-n"><span>689</span><span>44</span></span></td><td class="big">6</td><td><span class="stack-n"><span>014</span><span>58</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">7</td><td><span class="stack-n"><span>369</span><span>21</span></span></td><td class="big">0</td><td><span class="stack-n"><span>580</span><span>66</span></span></td><td class="big">5</td><td><span class="stack-n"><span>147</span><span>75</span></span></td><td class="big">9</td><td><span class="stack-n"><span>258</span><span>84</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">2</td><td><span class="stack-n"><span>691</span><span>08</span></span></td><td class="big">6</td><td><span class="stack-n"><span>803</span><span>17</span></span></td><td class="big">4</td><td><span class="stack-n"><span>415</span><span>26</span></span></td><td class="big">1</td><td><span class="stack-n"><span>926</span><span>35</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">PMB DAY</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">2</td><td><span class="stack-n"><span>118</span><span>40</span></span></td><td class="big">6</td><td><span class="stack-n"><span>567</span><span>15</span></span></td><td class="big">1</td><td><span class="stack-n"><span>234</span><span>88</span></span></td><td class="big">4</td><td><span class="stack-n"><span>901</span><span>22</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">7</td><td><span class="stack-n"><span>345</span><span>09</span></span></td><td class="big">3</td><td><span class="stack-n"><span>678</span><span>41</span></span></td><td class="big">8</td><td><span class="stack-n"><span>012</span><span>77</span></span></td><td class="big">5</td><td><span class="stack-n"><span>456</span><span>66</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">0</td><td><span class="stack-n"><span>460</span><span>33</span></span></td><td class="big">9</td><td><span class="stack-n"><span>789</span><span>18</span></span></td><td class="big">2</td><td><span class="stack-n"><span>135</span><span>55</span></span></td><td class="big">6</td><td><span class="stack-n"><span>288</span><span>44</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">4</td><td><span class="stack-n"><span>579</span><span>12</span></span></td><td class="big">1</td><td><span class="stack-n"><span>680</span><span>29</span></span></td><td class="big">7</td><td><span class="stack-n"><span>423</span><span>61</span></span></td><td class="big">3</td><td><span class="stack-n"><span>156</span><span>99</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">8</td><td><span class="stack-n"><span>691</span><span>05</span></span></td><td class="big">5</td><td><span class="stack-n"><span>024</span><span>38</span></span></td><td class="big">0</td><td><span class="stack-n"><span>337</span><span>72</span></span></td><td class="big">9</td><td><span class="stack-n"><span>880</span><span>11</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">3</td><td><span class="stack-n"><span>702</span><span>47</span></span></td><td class="big">6</td><td><span class="stack-n"><span>815</span><span>20</span></span></td><td class="big">2</td><td><span class="stack-n"><span>948</span><span>84</span></span></td><td class="big">4</td><td><span class="stack-n"><span>161</span><span>59</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>91</span></span></td><td class="big">7</td><td><span class="stack-n"><span>256</span><span>03</span></span></td><td class="big">9</td><td><span class="stack-n"><span>673</span><span>62</span></span></td><td class="big">8</td><td><span class="stack-n"><span>049</span><span>30</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">SHRIDEVI</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">3</td><td><span class="stack-n"><span>445</span><span>81</span></span></td><td class="big">6</td><td><span class="stack-n"><span>779</span><span>52</span></span></td><td class="big">2</td><td><span class="stack-n"><span>001</span><span>63</span></span></td><td class="big">8</td><td><span class="stack-n"><span>334</span><span>37</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">9</td><td><span class="stack-n"><span>566</span><span>74</span></span></td><td class="big">1</td><td><span class="stack-n"><span>228</span><span>19</span></span></td><td class="big">5</td><td><span class="stack-n"><span>893</span><span>41</span></span></td><td class="big">0</td><td><span class="stack-n"><span>450</span><span>96</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">7</td><td><span class="stack-n"><span>677</span><span>08</span></span></td><td class="big">4</td><td><span class="stack-n"><span>339</span><span>55</span></span></td><td class="big">8</td><td><span class="stack-n"><span>904</span><span>72</span></span></td><td class="big">6</td><td><span class="stack-n"><span>561</span><span>23</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">2</td><td><span class="stack-n"><span>788</span><span>31</span></span></td><td class="big">0</td><td><span class="stack-n"><span>440</span><span>64</span></span></td><td class="big">3</td><td><span class="stack-n"><span>115</span><span>88</span></span></td><td class="big">9</td><td><span class="stack-n"><span>672</span><span>14</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">5</td><td><span class="stack-n"><span>899</span><span>46</span></span></td><td class="big">7</td><td><span class="stack-n"><span>551</span><span>20</span></span></td><td class="big">1</td><td><span class="stack-n"><span>226</span><span>77</span></span></td><td class="big">4</td><td><span class="stack-n"><span>783</span><span>39</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">8</td><td><span class="stack-n"><span>990</span><span>62</span></span></td><td class="big">3</td><td><span class="stack-n"><span>662</span><span>15</span></span></td><td class="big">6</td><td><span class="stack-n"><span>337</span><span>48</span></span></td><td class="big">2</td><td><span class="stack-n"><span>894</span><span>01</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">4</td><td><span class="stack-n"><span>011</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>773</span><span>28</span></span></td><td class="big">5</td><td><span class="stack-n"><span>448</span><span>56</span></span></td><td class="big">1</td><td><span class="stack-n"><span>005</span><span>71</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Additional stacked market tables -->
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">PMB NIGHT</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">6</td><td><span class="stack-n"><span>889</span><span>71</span></span></td><td class="big">2</td><td><span class="stack-n"><span>145</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>623</span><span>40</span></span></td><td class="big">1</td><td><span class="stack-n"><span>034</span><span>82</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">9</td><td><span class="stack-n"><span>078</span><span>54</span></span></td><td class="big">3</td><td><span class="stack-n"><span>556</span><span>61</span></span></td><td class="big">0</td><td><span class="stack-n"><span>990</span><span>87</span></span></td><td class="big">5</td><td><span class="stack-n"><span>221</span><span>19</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">4</td><td><span class="stack-n"><span>334</span><span>06</span></span></td><td class="big">8</td><td><span class="stack-n"><span>667</span><span>25</span></span></td><td class="big">2</td><td><span class="stack-n"><span>891</span><span>73</span></span></td><td class="big">9</td><td><span class="stack-n"><span>054</span><span>51</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">1</td><td><span class="stack-n"><span>765</span><span>98</span></span></td><td class="big">6</td><td><span class="stack-n"><span>432</span><span>14</span></span></td><td class="big">3</td><td><span class="stack-n"><span>198</span><span>62</span></span></td><td class="big">7</td><td><span class="stack-n"><span>521</span><span>83</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">5</td><td><span class="stack-n"><span>887</span><span>42</span></span></td><td class="big">0</td><td><span class="stack-n"><span>213</span><span>76</span></span></td><td class="big">8</td><td><span class="stack-n"><span>645</span><span>59</span></span></td><td class="big">4</td><td><span class="stack-n"><span>370</span><span>91</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">8</td><td><span class="stack-n"><span>954</span><span>67</span></span></td><td class="big">2</td><td><span class="stack-n"><span>086</span><span>58</span></span></td><td class="big">9</td><td><span class="stack-n"><span>319</span><span>73</span></span></td><td class="big">1</td><td><span class="stack-n"><span>740</span><span>82</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">7</td><td><span class="stack-n"><span>642</span><span>83</span></span></td><td class="big">4</td><td><span class="stack-n"><span>173</span><span>94</span></span></td><td class="big">6</td><td><span class="stack-n"><span>805</span><span>71</span></span></td><td class="big">0</td><td><span class="stack-n"><span>962</span><span>53</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">MILAN DAY</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">3</td><td><span class="stack-n"><span>556</span><span>82</span></span></td><td class="big">7</td><td><span class="stack-n"><span>889</span><span>71</span></span></td><td class="big">1</td><td><span class="stack-n"><span>112</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>623</span><span>64</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">0</td><td><span class="stack-n"><span>223</span><span>74</span></span></td><td class="big">5</td><td><span class="stack-n"><span>991</span><span>82</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>71</span></span></td><td class="big">6</td><td><span class="stack-n"><span>067</span><span>93</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">4</td><td><span class="stack-n"><span>945</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>278</span><span>64</span></span></td><td class="big">7</td><td><span class="stack-n"><span>661</span><span>71</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>92</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">6</td><td><span class="stack-n"><span>734</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>467</span><span>71</span></span></td><td class="big">3</td><td><span class="stack-n"><span>890</span><span>64</span></span></td><td class="big">8</td><td><span class="stack-n"><span>123</span><span>55</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">5</td><td><span class="stack-n"><span>689</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>012</span><span>71</span></span></td><td class="big">4</td><td><span class="stack-n"><span>745</span><span>71</span></span></td><td class="big">2</td><td><span class="stack-n"><span>278</span><span>93</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>567</span><span>71</span></span></td><td class="big">1</td><td><span class="stack-n"><span>423</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>901</span><span>93</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">2</td><td><span class="stack-n"><span>056</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>389</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>712</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">TIME BAZZAR</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">2</td><td><span class="stack-n"><span>579</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>068</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>934</span><span>93</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>067</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>245</span><span>93</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">4</td><td><span class="stack-n"><span>378</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>067</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>290</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>123</span><span>93</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>956</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">5</td><td><span class="stack-n"><span>456</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>567</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>089</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">KALYAN</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">SHRIDEVI NIGHT</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">MILAN NIGHT</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">KALYAN NIGHT</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <div class="scroll-x">
+        <table class="data-table">
+          <thead><tr><th colspan="9">MAIN BAZAAR</th></tr></thead>
+          <tbody>
+            <tr><td class="day">सोम</td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">मंगल</td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">बुध</td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">गुरु</td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शुक्र</td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">7</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">3</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">शनि</td><td class="big">9</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">1</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">8</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">4</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+            <tr><td class="day">रवि</td><td class="big">0</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">6</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">5</td><td><span class="stack-n"><span>834</span><span>93</span></span></td><td class="big">2</td><td><span class="stack-n"><span>834</span><span>93</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-foot">
+    <p style="margin:0 0 8px;"><strong>Pune Main Bajar</strong> — static demo · sample numbers · no backend.</p>
+    <p style="margin:0;">© 2026 Pune Main Bajar · Charts · Results · <a href="#home" style="color:#fef08a;">Go top</a></p>
+  </footer>
+
+  <script>
+    /* Rotate which market row flashes as "live" (display only) */
+    (function () {
+      var boards = [];
+      boards.push.apply(boards, document.querySelectorAll(".dark-stage .market-row"));
+      boards.push.apply(boards, document.querySelectorAll(".cream-stage .market-row"));
+      if (boards.length < 2) return;
+      var i = boards.findIndex(function (el) { return el.classList.contains("is-live"); });
+      if (i < 0) i = 0;
+      setInterval(function () {
+        boards[i].classList.remove("is-live");
+        i = (i + 1) % boards.length;
+        boards[i].classList.add("is-live");
+      }, 5200);
+    })();
+  </script>
+</body>
+</html>
